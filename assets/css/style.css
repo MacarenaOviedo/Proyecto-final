@@ -1,0 +1,228 @@
+
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-size: 14px;
+	color: #333;
+	font-family:Raleway;
+}
+a{
+	text-decoration: none;
+}
+p{
+    line-height: 170%;
+}
+h1, h2, h3, h4{
+	text-transform: uppercase;
+	margin: 0 0 15px 0;
+}
+section{
+	padding: 60px 0;
+}
+.container{
+	max-width: 1080px;
+	width: 95%;
+    margin: 0 auto;
+    display: flex;
+}
+.container-100{
+	display: flex;
+	width: 95%;
+    margin: 0 auto;
+
+}
+header{
+	background: url(../img/bg-macarena-oviedo.jpg) no-repeat;
+	background-size: cover;
+	height: 550px;
+}
+header .container{
+	display: block;
+}
+@keyframes logo{
+
+0% {opacity:0;}
+100% {opacity:1;}
+
+}
+header h1{
+    text-align: center;
+    color: #fff;
+    margin: 210px 0 0 0;
+    width: 100%;
+    float: left;
+	animation-name:logo;
+ 	animation-duration: 2.5s;
+ 	animation-timing-function: ease-in-out;
+ 	animation-fill-mode: forwards;
+ 	animation-delay: 0s;
+}
+header .redes{
+	float: right;	
+    margin-top: 20px;
+}
+.redes  li{
+	display: inline-block;
+	margin: 0 10px 0 0;
+}
+.redes a .fa{
+	font-size: 25px;
+	color: #fff;
+	}
+.redes a .fa:hover{
+	color: #f4563c;
+}
+.col-2{
+	width: 48%;
+}
+.col-3{
+	width: 30%;
+}
+
+/*presentacion*/
+.presentacion .container, .portafolio .container-100, .footer1 .container{
+	justify-content: space-between;
+}
+.presentacion article{
+	/*width: 48%;*/
+	text-align: justify;
+}
+/*portafolio*/
+.portafolio{
+	background: #000;
+	color: #fff;
+}
+.portafolio h2{
+	text-align: center;
+	margin: 0 0 50px 0;
+
+}
+.portafolio a{
+	color: #fff;
+}
+.portafolio article{
+	/*width: 30%;
+	background: url(../img/proyecto.png) no-repeat;*/
+	background-size: cover;
+	position: relative;
+	overflow: hidden;
+    padding: 50px 0;
+    text-align: center;
+    margin: 0 0 40px 0;}
+.portafolio article:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(250,250,250,0.1);
+	width: 100%;
+	height:200px;
+	z-index: 1;
+}
+.portafolio article h2, .portafolio article p, .portafolio article a{
+	z-index: 2;
+	position: relative;
+}
+.portafolio article p{
+	margin: 5px 0 25px 0;
+}
+.portafolio article a{
+    background: rgb(252, 109, 76);
+    color: #fff;
+    padding: 12px 15px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+
+}
+.portafolio article a:hover, input[type="submit"]:hover{
+	background: #f4563c;
+}
+/*contacto*/
+.form-contact{
+	/*width: 45%;*/
+	color: #fff;
+}
+.form-contact label{
+    display: block;
+    margin: 25px 0 5px 0;
+    font-size: 15px;
+	}
+.form-contact input[type="text"], .form-contact textarea{
+    background: #fff;
+    width: 100%;
+    border: none;
+    /* border: 1px solid #ccc; */
+    padding: 5px;
+    height: 40px;
+    box-sizing: border-box;
+    color: #333;}
+}
+.form-contact textarea{
+height: 130px ;
+}
+input[type="submit"] {
+    background: rgb(252, 109, 76);
+    border: none;
+    padding: 15px 30px;
+    margin: 20px 0 0 0;
+    /* float: right; */
+    font-size: 12px;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+footer{
+	background: url(../img/slide1.png) no-repeat;
+	background-size: cover;
+	color: #fff;
+}
+.footer1{
+ padding: 60px 0;
+}
+.footer1 p{
+    border-left: 5px solid;
+    padding-left: 15px;
+    margin-top: 10px;
+}
+.footer1 .redes{
+	margin: 0 0 0 18px;
+}
+.footer2{
+    background: #000;
+    color: #777;
+    font-size: 12px;
+    padding: 15px 0;
+}
+@media screen and (max-width: 990px){
+header{
+	height: 300px;
+}
+header h1{
+    margin: 100px 0 0 0;
+}
+
+}
+@media screen and (max-width: 768px){
+.col-2{
+	width: 100%;
+	margin: 0 0 20px 0;
+}
+.col-3{
+	width: 100%;
+}
+.container, .container-100{
+	display: block;
+}
+input[type="submit"]{
+	width: 100%;
+}
+.footer1 p{
+	margin: 40px 0 0 0;
+}
+}
+
+
