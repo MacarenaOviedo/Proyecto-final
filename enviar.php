@@ -3,7 +3,7 @@
 // Recepción de info del formulario html
 $nombre = htmlentities($_POST['nombre']);
 $mensaje = htmlentities($_POST['mensaje']);
-$telefono = $_POST['telefono'];
+//$telefono = $_POST['telefono'];
 $email_usuario = strtolower($_POST['email']);
 
 /* --> NOTA
