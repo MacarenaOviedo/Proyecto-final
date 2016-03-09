@@ -13,6 +13,8 @@ a{
 }
 p{
     line-height: 170%;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 h1, h2, h3, h4{
 	text-transform: uppercase;
@@ -21,11 +23,26 @@ h1, h2, h3, h4{
 section{
 	padding: 60px 0;
 }
+article.img-proyect{
+	text-align: center;
+}
+article img.img-100{
+	width: 100%;
+    max-width: 500px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
 .container{
 	max-width: 1080px;
 	width: 95%;
     margin: 0 auto;
-    display: flex;
+    
+}
+.cont-flex{
+display: flex;
+
 }
 .container-100{
 	display: flex;
@@ -36,7 +53,11 @@ section{
 header{
 	background: url(../img/bg-macarena-oviedo.jpg) no-repeat;
 	background-size: cover;
-	height: 550px;
+	height: 520px;
+}
+.header-interiores{
+	height: 200px;
+
 }
 header .container{
 	display: block;
@@ -47,7 +68,7 @@ header .container{
 100% {opacity:1;}
 
 }
-header h1{
+header .cont-info{
     text-align: center;
     color: #fff;
     margin: 210px 0 0 0;
@@ -59,21 +80,37 @@ header h1{
  	animation-fill-mode: forwards;
  	animation-delay: 0s;
 }
+.header-interiores .cont-info{
+	margin: 50px 0 0 0;
+
+}
+header p a{
+	color: #f4563c;
+	font-weight: 600;
+}
+header ul li, .redes li{
+	display: inline-block;
+	margin: 0 15px 0 0;	
+}
+header ul li a{
+	font-size: 18px;
+	color: #fff;
+
+}
+header ul li a:hover, .redes a .fa:hover{
+	color: #f4563c;
+
+}
 header .redes{
 	float: right;	
     margin-top: 20px;
 }
-.redes  li{
-	display: inline-block;
-	margin: 0 10px 0 0;
-}
 .redes a .fa{
-	font-size: 25px;
-	color: #fff;
+font-size: 25px;
+color: #fff;
+
 	}
-.redes a .fa:hover{
-	color: #f4563c;
-}
+
 .col-2{
 	width: 48%;
 }
@@ -88,6 +125,16 @@ header .redes{
 .presentacion article{
 	/*width: 48%;*/
 	text-align: justify;
+}
+.link-a{
+	font-weight: bold;
+	margin-top:10px;
+	float: left;
+	color: #f4563c;
+	font-size: 17px;
+}
+.link-a:hover{
+	color:#333;
 }
 /*portafolio*/
 .portafolio{
@@ -126,7 +173,8 @@ header .redes{
 	position: relative;
 }
 .portafolio article p{
-	margin: 5px 0 25px 0;
+    margin: 5px auto 25px auto;
+    width: 90%;
 }
 .portafolio article a{
     background: rgb(252, 109, 76);
@@ -140,6 +188,11 @@ header .redes{
 .portafolio article a:hover, input[type="submit"]:hover{
 	background: #f4563c;
 }
+/*Single*/
+.img{
+
+
+}
 /*contacto*/
 .form-contact{
 	/*width: 45%;*/
@@ -149,6 +202,7 @@ header .redes{
     display: block;
     margin: 25px 0 5px 0;
     font-size: 15px;
+    font-weight: 400;
 	}
 .form-contact input[type="text"], .form-contact textarea{
     background: #fff;
@@ -198,10 +252,10 @@ footer{
     padding: 15px 0;
 }
 @media screen and (max-width: 990px){
-header{
-	height: 300px;
+header, .header-interiores{
+	height: 250px;
 }
-header h1{
+header .cont-info{
     margin: 100px 0 0 0;
 }
 
