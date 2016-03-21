@@ -9,6 +9,7 @@
 	<script src="assets/js/SmoothScroll.min.js"></script>
 	<script src="assets/js/bootstrap.min.js"></script>
 	<script src="assets/js/jquery.utilcarousel.min.js"></script>
+	<script src="http://www.youtube.com/player_api"></script>
 	<link href='https://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
@@ -22,7 +23,12 @@
 	</head>
 	<body>
 		<header>
-			
+			<div class="video">
+			<div id="player"></div>
+			<!--<div class="video">
+					<iframe id="ytplayer" type="text/html" style="position:absolute; top:0px; left:0px; bottom:0px; right:10px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;" src="https://www.youtube-nocookie.com/embed/qVs2dZi8YGA?playlist=qVs2dZi8YGA&start=60&rel=0&autoplay=1&controls=0&showinfo=0&loop=1&iv_load_policy=3&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+			</div>-->
+			</div>
 			<div class="container">
 
 				<div class="cont-nav">
@@ -60,11 +66,11 @@
 				<h2 class="titulo">Poleras Rocket</h2>
 				<div class="container-fluid">
 						<article class="col-md-6">
-								<div class="cont-interior">
-									<h3>T-SHIRT - LOGO - WHITE</h3>
-									<p>Tallas: S, M</p>
-									<a title="Ver producto" href="producto.html">Ver producto</a>
-								</div>
+							<div class="cont-interior">
+								<h3>T-SHIRT - LOGO - WHITE</h3>
+								<p>Tallas: S, M</p>
+								<a title="Ver producto" href="producto.html">Ver producto</a>
+							</div>
 						</article>
 						<article class="col-md-6">
 							<div class="cont-interior">
@@ -247,6 +253,64 @@
 
 
 	</div>
+
+
+
+<script>
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '700',
+          width: '3000',
+          videoId: 'ShPQqM50Vz0',
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
+
+      // 4. The API will call this function when the video player is ready.
+      function onPlayerReady(event) {
+        event.target.playVideo();
+      }
+
+      // 5. The API calls this function when the player's state changes.
+      //    The function indicates that when playing a video (state=1),
+      //    the player should play for six seconds and then stop.
+      var done = false;
+      function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+          setTimeout(stopVideo, 6000);
+          done = true;
+        }
+      }
+      function stopVideo() {
+        player.stopVideo();
+      }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 		<script>
 			//Funcion scroll
